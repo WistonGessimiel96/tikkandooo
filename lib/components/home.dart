@@ -21,23 +21,11 @@ class _HomePageState extends State<HomePage> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              // Logo de l'application
               Image.asset(
-                'assets/logo.png', // Assurez-vous d'avoir un logo dans le dossier assets
-                height: 100,
+                'lib/assets/img/logoBlanc.png',
+                width: double.infinity,
               ),
-              const SizedBox(height: 20),
-
-              // Texte d'accueil
-              const Text(
-                "TIKKANDOO",
-                style: TextStyle(
-                  fontSize: 28,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white,
-                ),
-              ),
-              const SizedBox(height: 10),
+              const SizedBox(height: 70),
 
               // Texte de sous-titre
               const Text(

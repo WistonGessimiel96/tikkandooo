@@ -30,10 +30,10 @@ class _RegisterPageState extends State<RegisterPage> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
                 Image.asset(
-                  'assets/logo.png', // Assurez-vous d'avoir un logo dans le dossier assets
-                  height: 100,
+                  'lib/assets/img/logoBlanc.png',
+                  width: double.infinity,
                 ),
-                const SizedBox(height: 20),
+                const SizedBox(height: 10),
                 const Text(
                   "Créez votre nouveau compte",
                   style: TextStyle(
@@ -50,7 +50,7 @@ class _RegisterPageState extends State<RegisterPage> {
                     color: Colors.white70,
                   ),
                 ),
-                const SizedBox(height: 30),
+                const SizedBox(height: 10),
                 TextField(
                   controller: _fullNameController,
                   decoration: const InputDecoration(

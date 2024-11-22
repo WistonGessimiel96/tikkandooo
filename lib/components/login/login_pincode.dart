@@ -51,11 +51,11 @@ class _LoginPincodePageState extends State<LoginPincodePage> {
       body: SingleChildScrollView(
         child: Column(
           children: [
+            const SizedBox(height: 100),
             Image.asset(
-              'assets/logo.png', // Assurez-vous d'avoir un logo dans le dossier assets
-              height: 100,
+              'lib/assets/img/logoBlanc.png',
+              width: double.infinity,
             ),
-            const SizedBox(height: 20),
             GestureDetector(
               onTap: () => FocusScope.of(context).requestFocus(FocusNode()),
               child: SingleChildScrollView(
@@ -64,12 +64,12 @@ class _LoginPincodePageState extends State<LoginPincodePage> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      const SizedBox(height: 130),
+                      const SizedBox(height: 50),
                       const Text(
                         "Veuillez saisir votre code pin.",
                         style: TextStyle(fontSize: 12, color: AppColors.white),
                       ),
-                      const SizedBox(height: 60),
+                      const SizedBox(height: 20),
                       Form(
                         key: formKey,
                         child: Column(

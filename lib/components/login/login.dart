@@ -27,10 +27,10 @@ class _LoginPageState extends State<LoginPage> {
               children: [
                 // Logo and App Title
                 Image.asset(
-                  'assets/logo.png', // Ensure your logo is in this path
-                  height: 80,
+                  'lib/assets/img/logoBlanc.png',
+                  width: double.infinity,
                 ),
-                const SizedBox(height: 20),
+                const SizedBox(height: 70),
                 const Text(
                   "Connectez-vous à votre compte",
                   style: TextStyle(

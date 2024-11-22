@@ -51,11 +51,11 @@ class _RegisterPincodePageState extends State<RegisterPincodePage> {
       body: SingleChildScrollView(
         child: Column(
           children: [
+            const SizedBox(height: 100),
             Image.asset(
-              'assets/logo.png', // Assurez-vous d'avoir un logo dans le dossier assets
-              height: 100,
+              'lib/assets/img/logoBlanc.png',
+              width: double.infinity,
             ),
-            const SizedBox(height: 20),
             GestureDetector(
               onTap: () => FocusScope.of(context).requestFocus(FocusNode()),
               child: SingleChildScrollView(
@@ -64,7 +64,7 @@ class _RegisterPincodePageState extends State<RegisterPincodePage> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      const SizedBox(height: 130),
+                      const SizedBox(height: 50),
                       const Text(
                         "Veuillez saisir le code pin que vous allez utiliser pour effectuer toutes vos transactions.\nCe dernier doit être de 4 chiffres non consécutifs, non répétitifs.",
                         style: TextStyle(fontSize: 12, color: AppColors.white),
