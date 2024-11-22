@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:tikkandoo/components/register/register.dart';
+import 'package:tikkandoo/utils/app_colors.dart';
+
+import 'login/login.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -26,7 +30,7 @@ class _HomePageState extends State<HomePage> {
 
               // Texte d'accueil
               const Text(
-                "TER",
+                "TIKKANDOO",
                 style: TextStyle(
                   fontSize: 28,
                   fontWeight: FontWeight.bold,
@@ -37,7 +41,7 @@ class _HomePageState extends State<HomePage> {
 
               // Texte de sous-titre
               const Text(
-                "Bienvenue dans notre TER\nApplication mobile de réservation de billets",
+                "Bienvenue sur TIKKANDOO,\n Votre application de réservation de tickets TER",
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: 18,
@@ -60,31 +64,50 @@ class _HomePageState extends State<HomePage> {
               // Bouton "Sign In"
               ElevatedButton(
                 onPressed: () {
-                  // Logique de connexion
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const RegisterPage(),
+                    ),
+                  );
                 },
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.white,
+                  backgroundColor: AppColors.secondary,
                   minimumSize: const Size(double.infinity, 50), // Largeur max
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(8),
                   ),
                 ),
                 child: const Text(
-                  "Se connecter",
+                  "Creer un compte",
                   style: TextStyle(
                     color: Color(0xFF0D4D4D),
                   ),
                 ),
               ),
-              const SizedBox(height: 10),
-
+              const SizedBox(height: 20),
+              const Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    "Vous avez déjà un compte?",
+                    style: TextStyle(color: Colors.white70),
+                  ),
+                ],
+              ),
+              const SizedBox(height: 5),
               // Bouton "Sign Up"
               ElevatedButton(
                 onPressed: () {
-                  // Logique d'inscription
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const LoginPage(),
+                    ),
+                  );
                 },
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.grey[700],
+                  backgroundColor: AppColors.white,
                   minimumSize: const Size(double.infinity, 50),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(8),
@@ -93,34 +116,11 @@ class _HomePageState extends State<HomePage> {
                 child: const Text(
                   "Se connecter",
                   style: TextStyle(
-                    color: Colors.white,
+                    color: AppColors.primary,
                   ),
                 ),
               ),
               const SizedBox(height: 20),
-
-              // Texte "Already have an account? Sign Up"
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  const Text(
-                    "Vous avez déjà un compte?",
-                    style: TextStyle(color: Colors.white70),
-                  ),
-                  TextButton(
-                    onPressed: () {
-                      // Action pour rediriger vers Sign Up
-                    },
-                    child: const Text(
-                      "Se connecter",
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                  ),
-                ],
-              ),
             ],
           ),
         ),
