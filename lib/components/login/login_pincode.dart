@@ -1,5 +1,6 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
+import 'package:tikkandoo/components/login/otp_login.dart';
 import 'package:tikkandoo/utils/app_colors.dart';
 import '../../utils/global_vars.dart';
 import '../widget/dialogs_widget.dart';
@@ -87,7 +88,14 @@ class _LoginPincodePageState extends State<LoginPincodePage> {
                                 const SizedBox(height: 8),
                                 PinCodeInput(_pinCtlr, focus: _oldPinFocus,
                                     handleSelected: (value) {
-                                      
+                                      if(value.length == 4){
+                                        Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                            builder: (context) =>   OtpLoginPage(user: widget.user,),
+                                          ),
+                                        );
+                                      }
                                     }),
                               ],
                             ),

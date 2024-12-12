@@ -5,7 +5,7 @@ import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:tikkandoo/components/P404.dart';
 import 'package:tikkandoo/components/home.dart';
-import 'package:tikkandoo/components/listticket.dart';
+import 'package:tikkandoo/components/ticket/listticket.dart';
 import 'package:tikkandoo/components/login/login.dart';
 import 'package:tikkandoo/components/noctification.dart';
 import 'package:tikkandoo/components/paiement.dart';

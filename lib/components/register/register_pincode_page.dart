@@ -1,5 +1,6 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
+import 'package:tikkandoo/components/register/otp_register.dart';
 import 'package:tikkandoo/utils/app_colors.dart';
 import '../../utils/global_vars.dart';
 import '../widget/dialogs_widget.dart';
@@ -138,7 +139,12 @@ class _RegisterPincodePageState extends State<RegisterPincodePage> {
                                     if (value.length == 4) {
                                       _newPinConfirmFocus.unfocus();
                                       if (_pinCtlr.text == _pinCtlr2.text) {
-
+                                        Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                            builder: (context) =>   OtpRegisterPage(user: widget.user,),
+                                          ),
+                                        );
                                       } else {
                                         dialogError(context,
                                             code: "",

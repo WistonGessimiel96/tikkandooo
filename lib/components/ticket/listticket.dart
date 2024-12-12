@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:tikkandoo/utils/app_colors.dart';
+
+import '../widget/custom_divider.dart';
 
 class ListticketPage extends StatefulWidget {
   const ListticketPage({Key? key}) : super(key: key);
@@ -106,7 +109,7 @@ class _ListticketPageState extends State<ListticketPage> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.teal,
-        title: const Text("Explore"),
+        title: const Text("Acheter un ticket"),
         centerTitle: true,
       ),
       body: Padding(
@@ -253,48 +256,122 @@ class TicketDetailPage extends StatelessWidget {
         backgroundColor: Colors.teal,
       ),
       body: Padding(
-        padding: const EdgeInsets.all(16.0),
+        padding: const EdgeInsets.all(30.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(
-              "Départ: ${ticket.departure}",
-              style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+            const SizedBox(height: 70),
+            Image.asset(
+              'lib/assets/img/train2.png',
+              width: double.infinity,
             ),
-            const SizedBox(height: 8),
-            Text(
-              "Destination: ${ticket.destination}",
-              style: const TextStyle(fontSize: 16),
+            const SizedBox(height: 70),
+            customDivider(),
+            const SizedBox(height: 20),
+            Row(
+              children: [
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const Text(
+                      "Départ",
+                      style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: AppColors.primary),
+                    ),
+                    Text(
+                      ticket.departure,
+                      style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w600, color: AppColors.secondary),
+                    ),
+                  ],
+                ),
+                const SizedBox(width: 10,),
+                Expanded(child: Column(children: [],)),
+                const SizedBox(width: 10,),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.end,
+                  children: [
+                    const Text(
+                      "Destination",
+                      style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: AppColors.primary),
+                    ),
+                    Text(
+                      ticket.destination,
+                      style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w600, color: AppColors.secondary),
+                    ),
+                  ],
+                ),
+              ],
             ),
-            const SizedBox(height: 8),
-            Text(
-              "Lieu de départ: ${ticket.departureLocation}",
-              style: const TextStyle(fontSize: 16),
+            const SizedBox(height: 20),
+            customDivider(),
+            const SizedBox(height: 20),
+            Row(
+              children: [
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const Text(
+                      "Passager",
+                      style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: AppColors.primary),
+                    ),
+                    Text(
+                      "Wiston Gessimiel",
+                      style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w600, color: AppColors.secondary),
+                    ),
+                  ],
+                ),
+                const SizedBox(width: 10,),
+                Expanded(child: Column(children: [],)),
+                const SizedBox(width: 10,),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.end,
+                  children: [
+                    const Text(
+                      "Ticket N°",
+                      style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: AppColors.primary),
+                    ),
+                    Text(
+                      ticket.ticketNo,
+                      style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w600, color: AppColors.secondary),
+                    ),
+                  ],
+                ),
+              ],
             ),
-            const SizedBox(height: 8),
-            Text(
-              "Lieu de destination: ${ticket.destinationLocation}",
-              style: const TextStyle(fontSize: 16),
-            ),
-            const SizedBox(height: 8),
-            Text(
-              "Heure de départ: ${ticket.time}",
-              style: const TextStyle(fontSize: 16),
-            ),
-            const SizedBox(height: 8),
-            Text(
-              "Durée: ${ticket.duration}",
-              style: const TextStyle(fontSize: 16),
-            ),
-            const SizedBox(height: 8),
-            Text(
-              "Prix: ${ticket.price}",
-              style: const TextStyle(fontSize: 16),
-            ),
-            const SizedBox(height: 8),
-            Text(
-              "N° Ticket: ${ticket.ticketNo}",
-              style: const TextStyle(fontSize: 16),
+            const SizedBox(height: 20),
+            customDivider(),
+            const SizedBox(height: 20),
+            Row(
+              children: [
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const Text(
+                      "Prix",
+                      style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: AppColors.primary),
+                    ),
+                    Text(
+                      ticket.price,
+                      style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w600, color: AppColors.secondary),
+                    ),
+                  ],
+                ),
+                const SizedBox(width: 10,),
+                Expanded(child: Column(children: [],)),
+                const SizedBox(width: 10,),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.end,
+                  children: [
+                    const Text(
+                      "Durée",
+                      style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: AppColors.primary),
+                    ),
+                    Text(
+                      ticket.duration,
+                      style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w600, color: AppColors.secondary),
+                    ),
+                  ],
+                ),
+              ],
             ),
           ],
         ),

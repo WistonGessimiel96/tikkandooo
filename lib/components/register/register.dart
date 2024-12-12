@@ -11,6 +11,7 @@ class RegisterPage extends StatefulWidget {
 
 class _RegisterPageState extends State<RegisterPage> {
   final _fullNameController = TextEditingController();
+  final _fullSurameController = TextEditingController();
   final _phoneController = TextEditingController();
   final _emailController = TextEditingController();
   final _passwordController = TextEditingController();
@@ -52,7 +53,7 @@ class _RegisterPageState extends State<RegisterPage> {
                 ),
                 const SizedBox(height: 10),
                 TextField(
-                  controller: _fullNameController,
+                  controller: _fullSurameController,
                   decoration: const InputDecoration(
                     labelText: 'Nom ',
                     labelStyle: TextStyle(color: Colors.white),

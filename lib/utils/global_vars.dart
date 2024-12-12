@@ -11,7 +11,8 @@ late String newToken;
 late String clientId;
 Map currentUser = {};
 var globalContext;
-
+List<dynamic> bannersOnline = [];
+String loadImage = "https://tmpfiles.org/dl/16081450/capturedecran2024-11-20a11.20.45.png";
 
 checkConsecutif(value) {
   int tmp = int.parse(value[0]);
